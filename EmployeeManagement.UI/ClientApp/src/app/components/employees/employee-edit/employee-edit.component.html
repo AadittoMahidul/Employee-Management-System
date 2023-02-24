@@ -1,0 +1,91 @@
+<mat-card class="medium-form-card-container">
+    <mat-card-header>
+        
+        <mat-card-title>{{employee.userName}}</mat-card-title>
+        <mat-card-subtitle>{{employee.currentPostion}}</mat-card-subtitle>
+        <img *ngIf="!employee.picture" src="../../../../assets/no-pic.jpg" class="avatar" mat-card-avatar />
+        <img *ngIf="employee.picture" src="{{imgPath}}{{employee.picture}}" class="avatar" mat-card-avatar />
+    </mat-card-header>
+    <mat-card-content>
+        <form class="medium-form-container" [formGroup]="employeeForm" (ngSubmit)="save()">
+            <h3>Personal informartion</h3>
+            <mat-divider></mat-divider>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="userName" >
+                <mat-error *ngIf="f['userName'].touched && f['userName'].hasError('required')">Username is <strong>required</strong></mat-error>
+
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-error *ngIf="f['email'].touched && f['email'].hasError('required')">Email is <strong>required</strong></mat-error>
+                <mat-error *ngIf="f['email'].touched && f['email'].hasError('email')">Email is <strong>invalid</strong></mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="phoneNumber" >
+                <mat-error *ngIf="f['phoneNumber'].touched && f['phoneNumber'].hasError('required')">Phone Number is <strong>required</strong></mat-error>
+
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Present address</mat-label>
+                <input matInput formControlName="homeAddress" >
+                <mat-error *ngIf="f['homeAddress'].touched && f['homeAddress'].hasError('required')">Preseent address is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Permanent address</mat-label>
+                <input matInput formControlName="permanentAddress" >
+                <mat-error *ngIf="f['permanentAddress'].touched && f['permanentAddress'].hasError('required')">Permanent address is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Picture</mat-label>
+                <input matInput formControlName="picture" >
+                <mat-icon (click)="file.click()" matSuffix>attach_file</mat-icon>
+                <mat-error *ngIf="f['picture'].touched && f['picture'].hasError('required')">Picture address is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Marital Status</mat-label>
+                <mat-select formControlName="maritalStatus">
+                   
+                    <mat-option *ngFor="let op of maritalStatusOptions" [value]="op.value">{{op.label}}</mat-option>
+                  </mat-select>
+                <mat-error *ngIf="f['picture'].touched && f['picture'].hasError('required')">Picture address is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            
+            <h3>Job informartion</h3>
+            <mat-divider></mat-divider>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Join Date</mat-label>
+                <input formControlName="joinDate" matInput [matDatepicker]="picker1">
+               
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Department</mat-label>
+                <input matInput formControlName="department" >
+                <mat-error *ngIf="f['department'].touched && f['department'].hasError('required')">Department is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="f-w">
+                <mat-label>Postion</mat-label>
+                <input matInput formControlName="currentPostion" >
+                <mat-error *ngIf="f['currentPostion'].touched && f['currentPostion'].hasError('required')">Current position is <strong>required</strong></mat-error>
+                
+            </mat-form-field>
+            <button class="circle-link" type="reset" mat-raised-button color="accent">Reset</button>
+            &nbsp;
+            <button class="circle-link" type="submit" mat-raised-button color="primary" [disabled]="employeeForm.invalid">Submit</button>
+
+            <input type="file" #file style="display: none;" (change)="uploadFile($event)"/>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button [routerLink]="['/employees']">Back to list</a>
+    </mat-card-actions>
+</mat-card>

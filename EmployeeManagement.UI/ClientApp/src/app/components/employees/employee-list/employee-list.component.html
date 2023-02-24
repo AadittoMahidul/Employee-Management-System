@@ -1,0 +1,51 @@
+<div class="view-container">
+  
+    <mat-card class="table-card mat-elevation-z9">
+      <mat-card-header>
+        <mat-card-title>Employees</mat-card-title>
+        <mat-card-subtitle>Employee list</mat-card-subtitle>
+        <!-- <img src="../../../../assets/adobe-bridge-brand-svgrepo-com.svg" mat-card-avatar class="avatar" /> -->
+        <span class="filler"></span>
+        <a mat-mini-fab [routerLink]="['/employee-create']" [title]="'Create new brand'"><mat-icon>add</mat-icon></a>
+      </mat-card-header>
+      <mat-card-content >
+        <mat-form-field class="f-w" style="margin-top: 15px;margin-bottom: 15px;">
+            <mat-label>Filter</mat-label>
+            <input matInput class="f-w" (keyup)="applyFilter($event)" placeholder="name, department or position" #input>
+          </mat-form-field>
+        <mat-table [dataSource]="dataSource" matSort>
+          <ng-container matColumnDef="userName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Username</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.userName}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef >E-mail</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="department">
+            <mat-header-cell *matHeaderCellDef  mat-sort-header>Department</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.department}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="currentPostion" >
+            <mat-header-cell *matHeaderCellDef>Position</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.currentPostion}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="roles">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Roles</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.roles}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef>Edit/Delete</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <button mat-icon-button [routerLink]="['/employee-edit', element.userName]"><mat-icon>edit</mat-icon></button>
+              <!-- <button mat-icon-button color="warn" (click)="confirmDelete(element)"><mat-icon>delete</mat-icon></button> -->
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+          <mat-row *matRowDef="let row;columns:columns"></mat-row>
+        </mat-table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+        
+      </mat-card-content>
+    </mat-card>
+  

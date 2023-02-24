@@ -1,0 +1,60 @@
+<mat-card class="medium-form-card-container">
+    <mat-card-header>
+        
+        <mat-card-title>{{employee.userName}}</mat-card-title>
+        <mat-card-subtitle>{{employee.currentPostion}}</mat-card-subtitle>
+        <img *ngIf="!employee.picture" src="../../../../assets/no-pic.jpg" class="avatar" mat-card-avatar />
+        <img *ngIf="employee.picture" src="{{imgPath}}{{employee.picture}}" class="avatar" mat-card-avatar />
+    </mat-card-header>
+    <mat-card-content>
+        <h3>Personal informartion</h3>
+        <mat-divider></mat-divider>
+        <mat-list>
+            <mat-list-item>
+                <span matListItemTitle>Username</span>
+                <span matListItemLine>{{employee.userName}}</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>E-mail</span>
+                <span matListItemLine>{{employee.email}}</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>Phone number</span>
+                <span matListItemLine>{{employee.phoneNumber}}</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>Present address</span>
+                <span matListItemLine>{{employee.homeAddress}}</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>Permanent address</span>
+                <span matListItemLine>{{employee.permanentAddress}}</span>
+              </mat-list-item>
+              <mat-list-item>
+                <span matListItemTitle>Marital Status</span>
+                <span matListItemLine>{{getStatusName(employee.maritalStatus)}}</span>
+              </mat-list-item>
+              
+          </mat-list>
+          <h3>Job informartion</h3>
+            <mat-divider></mat-divider>
+            <mat-list>
+                <mat-list-item>
+                    <span matListItemTitle>Join date</span>
+                    <span matListItemLine>{{employee.joinDate|date:'yyyy-MM-dd'}}</span>
+                </mat-list-item>
+                <mat-list-item>
+                    <span matListItemTitle>Department</span>
+                    <span matListItemLine>{{employee.department}}</span>
+                </mat-list-item>  
+                <mat-list-item>
+                    <span matListItemTitle>Position</span>
+                    <span matListItemLine>{{employee.currentPostion}}</span>
+                </mat-list-item>  
+              </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button [routerLink]="['/home']">Back to home</a>
+    </mat-card-actions>
+</mat-card>
+

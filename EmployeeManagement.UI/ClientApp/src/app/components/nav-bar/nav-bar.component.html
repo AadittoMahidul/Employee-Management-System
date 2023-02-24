@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="'over'"
+      [opened]="false">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/home']">Home</a>
+      <a mat-list-item [routerLink]="['/profile', userName]">Profile</a>
+      <a mat-list-item [routerLink]="['/employees']">Employees</a>
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Employee Management</span>
+      <span class="filler"></span>
+      <a  mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></a>
+      <mat-menu #menu="matMenu">
+        <span mat-menu-item style="width: 150px;">
+          <mat-icon>person</mat-icon>
+          <span>{{userName !== '' ? userName : "Guset"}}</span>
+        </span>
+        <mat-divider></mat-divider>
+        <a mat-menu-item [routerLink]="['/login']" *ngIf="!isLogged">
+          <mat-icon>login</mat-icon>
+          <span>Login</span>
+        </a>
+        <button mat-menu-item *ngIf="isLogged" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+
+      </mat-menu>
+
+    </mat-toolbar>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

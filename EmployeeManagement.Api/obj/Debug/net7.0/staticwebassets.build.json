@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "OoxCqQGxEmlORqVfx6TJatJZBiOtHhKNlW78hu7J5y8=",
+  "Source": "EmployeeManagement.Api",
+  "BasePath": "_content/EmployeeManagement.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeeManagement.Api\\wwwroot",
+      "Source": "EmployeeManagement.Api",
+      "ContentRoot": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\Pictures\\1onc3taa.jpg",
+      "SourceId": "EmployeeManagement.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement.Api",
+      "RelativePath": "Pictures/1onc3taa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pictures\\1onc3taa.jpg"
+    },
+    {
+      "Identity": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\Pictures\\b34psrhy.jpeg",
+      "SourceId": "EmployeeManagement.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement.Api",
+      "RelativePath": "Pictures/b34psrhy.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pictures\\b34psrhy.jpeg"
+    },
+    {
+      "Identity": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\Pictures\\krli5xlm.jpg",
+      "SourceId": "EmployeeManagement.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement.Api",
+      "RelativePath": "Pictures/krli5xlm.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pictures\\krli5xlm.jpg"
+    },
+    {
+      "Identity": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\Pictures\\ojgxqkcy.jpeg",
+      "SourceId": "EmployeeManagement.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "I:\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.Api\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement.Api",
+      "RelativePath": "Pictures/ojgxqkcy.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pictures\\ojgxqkcy.jpeg"
+    }
+  ]
+}

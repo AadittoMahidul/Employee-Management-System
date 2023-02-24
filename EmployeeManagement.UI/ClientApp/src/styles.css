@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.main-container {
+    box-sizing:border-box;
+    width:calc(100vw - 50px);
+    margin:0 auto;
+    padding:0;
+}
+.filler {
+    flex: 1 1 auto;
+}
+.filler-column {
+  display: flex;
+  align-items:stretch;
+  justify-content:flex-end;
+}
+.filler-column > * {
+    flex:1;
+    display:block;
+}
+.mat-simple-snackbar-action  button{
+  color: white !important;
+}
+.f-w {
+  width: 100%;
+  margin-bottom: .5rem 16px;
+}
+.f-w.right{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.my-1 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.view-container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 16px 0;
+}
+.table-card {
+
+  padding: 0;
+}
+.card-container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 16px 0 32px 0;
+}
+.form-card-container {
+  box-sizing: border-box;
+  width:450px;
+  padding: 0;
+  margin: 16px auto 32px auto;
+}
+.form-container {
+ 
+  margin: 25px auto;
+}
+.medium-form-card-container {
+  box-sizing: border-box;
+  width: 70%;
+  padding: 0;
+  margin: 16px auto;
+}
+
+.medium-form-container {
+  margin:8px 16px;
+}
+  .medium-form-container a {
+      margin-left:10px;
+      margin-bottom:32px;
+  }
+
+.avatar {
+ 
+  box-shadow: 0px 1px 10px rgba(0, 0, 0,.5), 0px 1px 15px rgba(0, 0, 0,.25);
+}
+.circle-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 8px;
+  background-color: transparent;
+  /*border: 1px solid #eeeeee;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 1s ease-out;
+}
+
+  .circle-image:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (max-width: 600px) {
+    .medium-form-card-container {
+    box-sizing: border-box;
+    width: 97%;
+    padding: 0;
+    margin: 16px auto;
+  }
+
+  .medium-form-container {
+    margin: 15px auto;
+  }
+  }
